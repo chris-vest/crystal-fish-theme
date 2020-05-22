@@ -19,11 +19,13 @@ $ omf install crystal
 
 ## Features
 
-* Path | Git status | ... | ✔︎ / ✗ $status
+* Displays git information in the command prompt when available
+* Displays ✘ if the previous command failed
 
 
 ## Screenshot
 
+* Path | Git status | ... | ✔︎ / ✗ $status
 <p align="center">
 <img src="./crystal-fish-theme.png">
 </p>
