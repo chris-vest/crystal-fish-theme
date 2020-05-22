@@ -19,9 +19,10 @@ $ omf install crystal
 
 ## Features
 
+Simple theme based on the `beloglazov` and `robbyrussell` themes.
+
 * Displays git information in the command prompt when available
 * Displays ✘ if the previous command failed
-
 
 ## Screenshot
 
