@@ -8,11 +8,11 @@ function _is_git_dirty
 end
 
 function fish_prompt
-  set -l cyan (set_color -o cyan)
-  set -l yellow (set_color -o yellow)
-  set -l red (set_color -o red)
-  set -l blue (set_color -o blue)
-  set -l purple (set_color -o purple)
+  set -l cyan (set_color -o 8BE9FD)
+  set -l yellow (set_color -o F1FA8C)
+  set -l red (set_color -o FF5555)
+  set -l blue (set_color -o 6272A4)
+  set -l purple (set_color -o BD93F())
   set -l normal (set_color normal)
 
   set -l cwd $cyan(prompt_pwd)
@@ -31,11 +31,6 @@ function fish_prompt
       set -l dirty "$yellow ✗"
       set git_info "$git_info$dirty"
     end
-  end
-
-  # Notify if a command took more than 5 minutes
-  if [ "$CMD_DURATION" -gt 300000 ]
-    echo The last command took (math "$CMD_DURATION/1000") seconds.
   end
 
   set -l arrow "$purple➜"
