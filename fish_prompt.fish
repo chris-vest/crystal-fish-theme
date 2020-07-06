@@ -12,7 +12,7 @@ function fish_prompt
   set -l yellow (set_color -o F1FA8C)
   set -l red (set_color -o FF5555)
   set -l blue (set_color -o 6272A4)
-  set -l purple (set_color -o BD93F())
+  set -l purple (set_color -o BD93F9)
   set -l normal (set_color normal)
 
   set -l cwd $cyan(prompt_pwd)
