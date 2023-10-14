@@ -9,17 +9,19 @@ end
 
 function fish_prompt
   set -l cyan (set_color -o 8BE9FD)
-  set -l yellow (set_color -o F1FA8C)
-  set -l red (set_color -o FF5555)
   set -l blue (set_color -o 6272A4)
+  set -l green (set_color -o 50FA7B)
+  set -l orange (set_color -o FFB86C)
+  set -l pink (set_color -o FF79C6)
   set -l purple (set_color -o BD93F9)
+  set -l red (set_color -o FF5555)
+  set -l yellow (set_color -o F1FA8C)
   set -l normal (set_color normal)
 
   set -l cwd $cyan(prompt_pwd)
 
   if [ (_git_branch_name) ]
-
-    if test (_git_branch_name) = 'master'
+    if test (_git_branch_name) = 'master|main'
       set -l git_branch (_git_branch_name)
       set git_info "$normal $blue($red$git_branch$normal$blue)"
     else
@@ -33,7 +35,7 @@ function fish_prompt
     end
   end
 
-  set -l arrow "$purple➜"
+  set -l arrow "$pink➜"
 
   echo -n -s $cwd $git_info $normal ' ' $arrow ' '
 end
