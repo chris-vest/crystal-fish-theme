@@ -18,7 +18,7 @@ function fish_prompt
   set -l yellow (set_color -o F1FA8C)
   set -l normal (set_color normal)
 
-  set -l cwd $cyan(prompt_pwd)
+  set -l cwd $green(prompt_pwd)
 
   if [ (_git_branch_name) ]
     if test (_git_branch_name) = 'master|main'
@@ -30,7 +30,7 @@ function fish_prompt
     end
 
     if [ (_is_git_dirty) ]
-      set -l dirty "$yellow ✗"
+      set -l dirty "$orange ✗"
       set git_info "$git_info$dirty"
     end
   end
